@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_ProPhotoStock", "P_ProPhotoStock\P_ProPhotoStock.csproj", "{BFA5AFD5-1B54-4C92-BCB9-119AD7A2F7D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFA5AFD5-1B54-4C92-BCB9-119AD7A2F7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA5AFD5-1B54-4C92-BCB9-119AD7A2F7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA5AFD5-1B54-4C92-BCB9-119AD7A2F7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA5AFD5-1B54-4C92-BCB9-119AD7A2F7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33897574-0F5F-4BC8-9ED5-6A488C40C7F5}
+	EndGlobalSection
+EndGlobal
