@@ -12,5 +12,8 @@ public partial class LoginPage : ContentPage
 	{
         await Shell.Current.GoToAsync("///register");
     }
-
+	private async void LoginCommand(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("///main/catalog");
+    }
 }

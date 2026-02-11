@@ -957,3 +957,6 @@ C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\D
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\resizetizer\r\drawable\email_icon.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\resizetizer\r\drawable\password_icon.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\resizetizer\r\drawable\user_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\resizetizer\r\drawable\catalog_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\resizetizer\r\drawable\camera_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\resizetizer\r\drawable\contracts_icon.png

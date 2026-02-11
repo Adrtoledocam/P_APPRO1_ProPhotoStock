@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--<Shell
-    x:Class="ProPhotoStock.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ProPhotoStock"
-    Title="ProPhotoStock">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
-</Shell>-->
-
 <Shell
     x:Class="ProPhotoStock.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -26,5 +12,30 @@
     <ShellContent        
         Route="register" 
         ContentTemplate="{DataTemplate pages:RegisterPage}"/>
+    
+    <TabBar Route="main">
+        <ShellContent
+            Route="catalog"
+            Title="Catalogue"
+            Icon="catalog_icon.png"
+            ContentTemplate="{DataTemplate pages:CatalogPage}"/>
+        <ShellContent
+            Route="camera"
+            Title="Caméra"
+            Icon="camera_icon.png"
+            ContentTemplate="{DataTemplate pages:CameraPage}"/>
+        <ShellContent
+            Route="contracts"
+            Title="Contrats"
+            Icon="contracts_icon.png"
+            ContentTemplate="{DataTemplate pages:ContratctsPage}"/>
+        <ShellContent
+            Route="user"
+            Title="Profil"
+            Icon="user_icon.png"
+            ContentTemplate="{DataTemplate pages:UserPage}"/>
+    </TabBar>
 </Shell>
+    
 
+    
