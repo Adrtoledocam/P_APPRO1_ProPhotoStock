@@ -3,32 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\contratctspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\contratctspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\contratctspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\contratctspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\catalogpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\catalogpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\prophotostock.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:prophotostock.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:pages\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}|ProPhotoStock.csproj|c:\\users\\pq17tmn\\documents\\github\\p_appro1_prophotostock\\app\\prophotostock\\pages\\catalogpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -46,24 +70,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ContratctsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\ContratctsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\ContratctsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\ContratctsPage.xaml.cs",
+              "RelativeToolTip": "Pages\\ContratctsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:20:40.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContratctsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\ContratctsPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\ContratctsPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\ContratctsPage.xaml",
+              "RelativeToolTip": "Pages\\ContratctsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T15:20:37.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProPhotoStock",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\ProPhotoStock.csproj",
+              "RelativeDocumentMoniker": "ProPhotoStock.csproj",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\ProPhotoStock.csproj",
+              "RelativeToolTip": "ProPhotoStock.csproj",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowEIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-11T15:17:12.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\RegisterPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\RegisterPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\RegisterPage.xaml",
+              "RelativeToolTip": "Pages\\RegisterPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T15:16:41.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T15:16:22.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\UserPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\UserPage.xaml.cs",
               "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\UserPage.xaml.cs",
               "RelativeToolTip": "Pages\\UserPage.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-11T14:21:05.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\LoginPage.xaml.cs",
@@ -71,24 +160,25 @@
               "RelativeToolTip": "Pages\\LoginPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T14:19:14.073Z"
+              "WhenOpened": "2026-02-11T14:19:14.073Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "UserPage.xaml",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\UserPage.xaml",
               "RelativeDocumentMoniker": "Pages\\UserPage.xaml",
               "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\UserPage.xaml",
               "RelativeToolTip": "Pages\\UserPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-02-11T14:16:43.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Styles.xaml",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Resources\\Styles\\Styles.xaml",
               "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
@@ -100,32 +190,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "Pages\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\LoginPage.xaml",
-              "RelativeToolTip": "Pages\\LoginPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-11T13:40:51.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CatalogPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\CatalogPage.xaml.cs",
               "RelativeDocumentMoniker": "Pages\\CatalogPage.xaml.cs",
               "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\CatalogPage.xaml.cs",
               "RelativeToolTip": "Pages\\CatalogPage.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwA4AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-11T13:21:04.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:16:24.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\LoginPage.xaml",
+              "RelativeToolTip": "Pages\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T13:40:51.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CatalogPage.xaml",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Pages\\CatalogPage.xaml",
               "RelativeDocumentMoniker": "Pages\\CatalogPage.xaml",
@@ -137,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
@@ -149,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Colors.xaml",
               "DocumentMoniker": "C:\\Users\\pq17tmn\\Documents\\GitHub\\P_APPRO1_ProPhotoStock\\app\\ProPhotoStock\\Resources\\Styles\\Colors.xaml",
               "RelativeDocumentMoniker": "Resources\\Styles\\Colors.xaml",

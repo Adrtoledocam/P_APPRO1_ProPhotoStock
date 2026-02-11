@@ -8,7 +8,7 @@
     <VerticalStackLayout Padding="30" Spacing="20">
 
         <!-- Logo -->
-        <Image Source="splash_logo.png" HeightRequest="225" HorizontalOptions="Center"/>
+        <Image Source="logo.png" HeightRequest="225" HorizontalOptions="Center"/>
 
         <Frame BackgroundColor="White" CornerRadius="20" Padding="25" HasShadow="True">
             <VerticalStackLayout Spacing="20">
