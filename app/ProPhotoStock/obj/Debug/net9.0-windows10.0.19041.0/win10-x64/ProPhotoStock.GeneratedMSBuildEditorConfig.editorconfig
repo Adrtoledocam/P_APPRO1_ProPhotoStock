@@ -46,6 +46,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Pages.LoginP
 build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
 
+[C:/Users/pq17tmn/Documents/GitHub/P_APPRO1_ProPhotoStock/app/ProPhotoStock/Pages/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Pages.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RegisterPage.xaml
+
 [C:/Users/pq17tmn/Documents/GitHub/P_APPRO1_ProPhotoStock/app/ProPhotoStock/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Resources.Styles.Colors.xaml
