@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProPhotoStock.Pages.CatalogPage"
+             x:Class="ProPhotoStock.Pages.CatalogPage"            
              Title="CatalogPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Shell.TitleView>
+        <!-- Filtres -->
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Categories : " VerticalOptions="Center" TextTransform="Uppercase" />
+            <HorizontalStackLayout Spacing="-5">
+                <CheckBox x:Name="PaysageFilter" Color="White" />
+                <Label Text="#Paysage" VerticalOptions="Center"  TextColor="White" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="-5">
+                <CheckBox x:Name="PortraitFilter" Color="White"/>
+                <Label Text="#Portrait" VerticalOptions="Center" TextColor="White" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="-5">
+                <CheckBox x:Name="SportFilter" Color="White"/>
+                <Label Text="#Sport" VerticalOptions="Center" TextColor="White" />
+            </HorizontalStackLayout>
+
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <!-- Photos -->
+            <CollectionView x:Name="PhotosList" ItemsLayout="VerticalList" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeThickness="0" Background="White" StrokeShape="RoundRectangle 20" Margin="0,0" Padding="15">
+                            <VerticalStackLayout Spacing="10">
+                                <!-- Title -->
+                                <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" />
+                                <!-- User -->
+                                <Label Text="{Binding User}"  FontSize="14" />
+                                <!-- Img -->
+                                <Image Source="{Binding ImageUrl}" HeightRequest="180" Aspect="AspectFill" />
+                                <!-- Tags -->
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="{Binding Tag}" TextColor="#20C6D2" FontAttributes="Bold" />
+                                </HorizontalStackLayout>
+
+                                <Button Text="Acheter" BackgroundColor="#20C6D2" TextColor="White" CornerRadius="20" HeightRequest="45" FontAttributes="Bold" FontSize="20"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
