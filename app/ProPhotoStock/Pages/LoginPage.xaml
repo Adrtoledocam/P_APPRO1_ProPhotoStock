@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProPhotoStock.Pages.LoginPage"
-             BackgroundColor="#20C6D2" 
+             BackgroundColor="#0F5F68" 
              Title=""
              >
     <VerticalStackLayout Padding="30" Spacing="20">
@@ -13,7 +13,7 @@
         <Frame BackgroundColor="White" CornerRadius="20" Padding="25" HasShadow="True">
             <VerticalStackLayout Spacing="20">
                 
-                <Label Text="Se Connecter" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#20C6D2"/>
+                <Label Text="Se Connecter" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#0F5F68"/>
                 <!--E-mail-->
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
                     <Image Source="email_icon.png" HeightRequest="24" WidthRequest="24" VerticalOptions="Center"/>
@@ -25,8 +25,8 @@
                     <Entry Placeholder="Mot de passe" IsPassword="True" Text="{Binding Password}" WidthRequest="250" FontSize="16" HorizontalOptions="Fill"/>
                 </HorizontalStackLayout>
                 
-                <Button Text="Se connecter" Clicked="LoginCommand" BackgroundColor="#20C6D2" TextColor="White" FontSize="18" CornerRadius="25"/>
-                <Label Text="Créer un nouveau compte" TextColor="#20C6D2" HorizontalOptions="Center" TextDecorations="Underline" FontSize="14" FontAttributes="Bold" >
+                <Button Text="Se connecter" Clicked="LoginCommand" BackgroundColor="#0F5F68" TextColor="White" FontSize="18" CornerRadius="25"/>
+                <Label Text="Créer un nouveau compte" TextColor="#0F5F68" HorizontalOptions="Center" TextDecorations="Underline" FontSize="14" FontAttributes="Bold" >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="RegisterButton_Clicked" />
                     </Label.GestureRecognizers>

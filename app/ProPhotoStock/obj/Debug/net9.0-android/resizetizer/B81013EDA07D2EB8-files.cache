@@ -2,6 +2,7 @@
 obj\Debug\net9.0-android\resizetizer\r\drawable\catalog_icon.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\contracts_icon.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\email_icon.png
+obj\Debug\net9.0-android\resizetizer\r\drawable\gallery_icon.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\password_icon.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\splash_logo.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\user_icon.png

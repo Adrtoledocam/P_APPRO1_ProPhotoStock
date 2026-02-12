@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProPhotoStock")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d3870cbc450c5ab862105559ad698e1a36475345")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d5d3cd1905abd1614c28c87741bd37b82de5f83b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProPhotoStock")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProPhotoStock")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

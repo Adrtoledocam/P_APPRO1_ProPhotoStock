@@ -7,12 +7,43 @@
 
     <VerticalStackLayout Padding="20" Spacing="20" >
 
-        <VerticalStackLayout x:Name="SelectButtons" Spacing="15">
-            <Button Text="Prendre une photo" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnTakePhotoClicked" />
-            <Button Text="Choisir depuis la galerie" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnPickPhotoClicked" />
-        </VerticalStackLayout>
-        
+        <Label Text="Partagez une photo" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" />
 
+        <Grid x:Name="SelectGrid"
+              ColumnDefinitions="*,*"
+              ColumnSpacing="20"
+              Padding="10">
+            <Border Grid.Column="0"
+                   Stroke="#0F5F68"
+                   StrokeThickness="2"
+                   Background="#E0F7F9"
+                   StrokeShape="RoundRectangle 15">
+                <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Padding="20">
+                    <Image Source="camera_icon.png" HeightRequest="60" />
+                    <Label Text="Prendre une photo" FontAttributes="Bold" TextColor="Black" />
+                </VerticalStackLayout>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTakePhotoClicked" />
+                </Border.GestureRecognizers>
+            </Border  >
+
+            <Border Grid.Column="1" Stroke="#0F5F68" StrokeThickness="2" Background="#E0F7F9" StrokeShape="RoundRectangle 15">
+                <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Padding="20">
+                    <Image Source="gallery_icon.png" HeightRequest="60" />
+                    <Label Text="Choisir depuis la galerie" FontAttributes="Bold" TextColor="Black" />
+                </VerticalStackLayout>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnPickPhotoClicked" />
+                </Border.GestureRecognizers>
+            </Border>
+        </Grid>
+
+        <!--
+        <VerticalStackLayout x:Name="SelectButtons" Spacing="15">
+            <Button Text="Prendre une photo" BackgroundColor="#0F5F68" TextColor="White" Clicked="OnTakePhotoClicked" />
+            <Button Text="Choisir depuis la galerie" BackgroundColor="#0F5F68" TextColor="White" Clicked="OnPickPhotoClicked" />
+        </VerticalStackLayout> -->
+        
         <Image x:Name="PhotoPreview" HeightRequest="300" Aspect="AspectFill" IsVisible="False"/>
 
         <VerticalStackLayout x:Name="UploadFields" Spacing="15" IsVisible="False" >
@@ -21,19 +52,19 @@
             <Label Text="Genre" FontAttributes="Bold" TextColor="Black" />
             <HorizontalStackLayout Spacing="20" >
                 <HorizontalStackLayout Spacing="5" >
-                    <CheckBox Color="#20C6D2" />
+                    <CheckBox Color="#0F5F68" />
                     <Label Text="#Portrait" TextColor="Black" VerticalOptions="Center"   />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout Spacing="5">
-                    <CheckBox Color="#20C6D2"/>
+                    <CheckBox Color="#0F5F68"/>
                     <Label Text="#Paysage" TextColor="Black" VerticalOptions="Center" />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout Spacing="5" >
-                    <CheckBox Color="#20C6D2" />
+                    <CheckBox Color="#0F5F68" />
                     <Label Text="#Sport" TextColor="Black" VerticalOptions="Center" />
                 </HorizontalStackLayout>
             </HorizontalStackLayout>
-            <Button Text="Partager" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnUploadClicked" />
+            <Button Text="Partager" BackgroundColor="#0F5F68" TextColor="White" Clicked="OnUploadClicked" />
         </VerticalStackLayout>
         
     </VerticalStackLayout>

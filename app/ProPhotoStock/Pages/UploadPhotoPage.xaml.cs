@@ -20,7 +20,7 @@ public partial class UploadPhotoPage : ContentPage
     private void ResetUI()
     {
         UploadFields.IsVisible = false;
-        SelectButtons.IsVisible = true;
+        SelectGrid.IsVisible = true;
         PhotoPreview.IsVisible = false;
         PhotoPreview.Source = null;
         PhotoNameEntry.Text = string.Empty;
@@ -43,7 +43,7 @@ public partial class UploadPhotoPage : ContentPage
                 PhotoPreview.Source = ImageSource.FromStream(() => stream);
                 UploadFields.IsVisible = true;
                 PhotoPreview.IsVisible = true;
-                SelectButtons.IsVisible = false;
+                SelectGrid.IsVisible = false;
             }
 		}
 		catch (Exception ex)
@@ -63,7 +63,7 @@ public partial class UploadPhotoPage : ContentPage
                 PhotoPreview.Source = ImageSource.FromStream(() => stream);
                 UploadFields.IsVisible = true;
                 PhotoPreview.IsVisible = true;
-                SelectButtons.IsVisible = false;
+                SelectGrid.IsVisible = false;
             }
         }
         catch (Exception ex)

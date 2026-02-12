@@ -39,10 +39,10 @@
                                 <Image Source="{Binding ImageUrl}" HeightRequest="180" Aspect="AspectFill" />
                                 
                                 <HorizontalStackLayout Spacing="5">
-                                    <Label Text="{Binding Tag}" TextColor="#20C6D2" FontAttributes="Bold" />
+                                    <Label Text="{Binding Tag}" TextColor="#0F5F68" FontAttributes="Bold" />
                                 </HorizontalStackLayout>
 
-                                <Button Text="Acheter" BackgroundColor="#20C6D2" TextColor="White" CornerRadius="20" HeightRequest="45" FontAttributes="Bold" FontSize="20"/>
+                                <Button Text="Acheter" BackgroundColor="#0F5F68" TextColor="White" CornerRadius="20" HeightRequest="45" FontAttributes="Bold" FontSize="20"/>
                             </VerticalStackLayout>
                         </Border>
                     </DataTemplate>

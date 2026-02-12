@@ -33,8 +33,8 @@
                             <Label Text="{Binding ContractUsage}"  TextColor="Black"  />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
-                            <Label Text="Coût :" FontAttributes="Bold" />
-                            <Label Text="{Binding Cost}" FontSize="16" TextColor="#20C6D2" FontAttributes="Bold" />
+                            <Label Text="Coût :" FontAttributes="Bold" TextColor="Black" />
+                            <Label Text="{Binding Cost}" FontSize="16" TextColor="#0F5F68" FontAttributes="Bold" />
                         </HorizontalStackLayout>
                         
                     </VerticalStackLayout>

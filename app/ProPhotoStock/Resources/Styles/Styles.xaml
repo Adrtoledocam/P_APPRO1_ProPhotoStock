@@ -416,7 +416,7 @@
     </Style>
 
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
-        <Setter Property="Shell.BackgroundColor" Value="#20C6D2" />
+        <Setter Property="Shell.BackgroundColor" Value="#0F5F68" />
         <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource SecondaryDarkText}}" />
         <!--Background color in menu title-->
         <Setter Property="Shell.TitleColor" Value="White" />
@@ -425,8 +425,8 @@
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
         <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
         <!--Background color in menu nav-->
-        <Setter Property="Shell.TabBarForegroundColor" Value="#20C6D2" />
-        <Setter Property="Shell.TabBarTitleColor" Value="#20C6D2" />
+        <Setter Property="Shell.TabBarForegroundColor" Value="#0F5F68" />
+        <Setter Property="Shell.TabBarTitleColor" Value="#0F5F68" />
         <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}" />
     </Style>
 
@@ -442,7 +442,7 @@
         <Setter Property="UnselectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
-    <Color x:Key="TabBarSelectedColor">#20C6D2</Color>
+    <Color x:Key="TabBarSelectedColor">#0F5F68</Color>
     <Style TargetType="ShellItem">
         <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource TabBarSelectedColor}" />
     </Style>

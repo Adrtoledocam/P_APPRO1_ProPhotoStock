@@ -1372,3 +1372,4 @@ C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\D
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-android\resizetizer\r\drawable\gallery_icon.png

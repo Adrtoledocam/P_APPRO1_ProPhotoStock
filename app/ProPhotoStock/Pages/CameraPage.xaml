@@ -5,11 +5,11 @@
              Title="Photo">
 
     <VerticalStackLayout Padding="20" Spacing="20">
-        <Button Text="Prendre une photo" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnTakePhotoClicked" />
-        <Button Text="Choisir depuis la galerie" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnPickPhotoClicked" />
+        <Button Text="Prendre une photo" BackgroundColor="#0F5F68" TextColor="White" Clicked="OnTakePhotoClicked" />
+        <Button Text="Choisir depuis la galerie" BackgroundColor="#0F5F68" TextColor="White" Clicked="OnPickPhotoClicked" />
 
         <Image x:Name="PreviewImage" HeightRequest="300" Aspect="AspectFill" IsVisible="False" />
-        <Button Text="Continuer" BackgroundColor="#20C6D2" TextColor="White" IsVisible="False" x:Name="ContinueButton" Clicked="OnContinueClicked" />
+        <Button Text="Continuer" BackgroundColor="#0F5F68" TextColor="White" IsVisible="False" x:Name="ContinueButton" Clicked="OnContinueClicked" />
     </VerticalStackLayout>
 
 </ContentPage>
