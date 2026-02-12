@@ -12,18 +12,18 @@
     <ShellContent        
         Route="register" 
         ContentTemplate="{DataTemplate pages:RegisterPage}"/>
-    
+
     <TabBar Route="main">
         <ShellContent
             Route="catalog"
             Title="Catalogue"
             Icon="catalog_icon.png"
             ContentTemplate="{DataTemplate pages:CatalogPage}"/>
-        <ShellContent
-            Route="camera"
+        <ShellContent 
+            Route="uploadphoto"
             Title="Caméra"
             Icon="camera_icon.png"
-            ContentTemplate="{DataTemplate pages:CameraPage}"/>
+            ContentTemplate="{DataTemplate pages:UploadPhotoPage}" />
         <ShellContent
             Route="contracts"
             Title="Contrats"
@@ -34,7 +34,9 @@
             Title="Profil"
             Icon="user_icon.png"
             ContentTemplate="{DataTemplate pages:UserPage}"/>
+        
     </TabBar>
+    
 </Shell>
     
 

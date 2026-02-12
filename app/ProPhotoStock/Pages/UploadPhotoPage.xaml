@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProPhotoStock.Pages.UploadPhotoPage"
+             BackgroundColor="White"
+             Title="Partager">
+
+    <VerticalStackLayout Padding="20" Spacing="20" >
+
+        <VerticalStackLayout x:Name="SelectButtons" Spacing="15">
+            <Button Text="Prendre une photo" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnTakePhotoClicked" />
+            <Button Text="Choisir depuis la galerie" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnPickPhotoClicked" />
+        </VerticalStackLayout>
+        
+
+        <Image x:Name="PhotoPreview" HeightRequest="300" Aspect="AspectFill" IsVisible="False"/>
+
+        <VerticalStackLayout x:Name="UploadFields" Spacing="15" IsVisible="False" >
+            <Label Text="Nom :" FontAttributes="Bold"  TextColor="Black"/>
+            <Entry x:Name="PhotoNameEntry" Placeholder="Nom de l'image"  TextColor="Black" />
+            <Label Text="Genre" FontAttributes="Bold" TextColor="Black" />
+            <HorizontalStackLayout Spacing="20" >
+                <HorizontalStackLayout Spacing="5" >
+                    <CheckBox Color="#20C6D2" />
+                    <Label Text="#Portrait" TextColor="Black" VerticalOptions="Center"   />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5">
+                    <CheckBox Color="#20C6D2"/>
+                    <Label Text="#Paysage" TextColor="Black" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5" >
+                    <CheckBox Color="#20C6D2" />
+                    <Label Text="#Sport" TextColor="Black" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+            <Button Text="Partager" BackgroundColor="#20C6D2" TextColor="White" Clicked="OnUploadClicked" />
+        </VerticalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

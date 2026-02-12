@@ -58,12 +58,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Pages.Contra
 build_metadata.AdditionalFiles.TargetPath = Pages\ContratctsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ContratctsPage.xaml
 
-[C:/Users/pq17tmn/Documents/GitHub/P_APPRO1_ProPhotoStock/app/ProPhotoStock/Pages/GalleryPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Pages.GalleryPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\GalleryPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\GalleryPage.xaml
-
 [C:/Users/pq17tmn/Documents/GitHub/P_APPRO1_ProPhotoStock/app/ProPhotoStock/Pages/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Pages.LoginPage.xaml
@@ -75,6 +69,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Pages.RegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\RegisterPage.xaml
+
+[C:/Users/pq17tmn/Documents/GitHub/P_APPRO1_ProPhotoStock/app/ProPhotoStock/Pages/UploadPhotoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProPhotoStock.Pages.UploadPhotoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\UploadPhotoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\UploadPhotoPage.xaml
 
 [C:/Users/pq17tmn/Documents/GitHub/P_APPRO1_ProPhotoStock/app/ProPhotoStock/Pages/UserPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

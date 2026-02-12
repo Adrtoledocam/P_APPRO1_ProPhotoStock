@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProPhotoStock.Pages.CatalogPage"            
+             x:Class="ProPhotoStock.Pages.CatalogPage"
+             BackgroundColor="White"             
              Title="CatalogPage">
 
     <Shell.TitleView>
@@ -25,20 +26,18 @@
     </Shell.TitleView>
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="10">
+        <VerticalStackLayout Padding="20" Spacing="10" >
             <!-- Photos -->
             <CollectionView x:Name="PhotosList" ItemsLayout="VerticalList" SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border StrokeThickness="0" Background="White" StrokeShape="RoundRectangle 20" Margin="0,0" Padding="15">
                             <VerticalStackLayout Spacing="10">
-                                <!-- Title -->
-                                <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" />
-                                <!-- User -->
-                                <Label Text="{Binding User}"  FontSize="14" />
-                                <!-- Img -->
+                                <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="{Binding User}"  FontSize="14" TextColor="Black"/>
+                           
                                 <Image Source="{Binding ImageUrl}" HeightRequest="180" Aspect="AspectFill" />
-                                <!-- Tags -->
+                                
                                 <HorizontalStackLayout Spacing="5">
                                     <Label Text="{Binding Tag}" TextColor="#20C6D2" FontAttributes="Bold" />
                                 </HorizontalStackLayout>

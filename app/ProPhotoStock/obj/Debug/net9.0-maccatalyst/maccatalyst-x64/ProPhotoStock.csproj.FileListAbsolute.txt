@@ -255,6 +255,13 @@ C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\D
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\email_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\user_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\camera_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\catalog_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\password_icon.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\splash_logo.png
+C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\contracts_icon.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -267,12 +274,6 @@ C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\D
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\email_icon.png
-C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\user_icon.png
-C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\catalog_icon.png
-C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\camera_icon.png
-C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\contracts_icon.png
-C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\password_icon.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
 C:\Users\pq17tmn\Documents\GitHub\P_APPRO1_ProPhotoStock\app\ProPhotoStock\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
