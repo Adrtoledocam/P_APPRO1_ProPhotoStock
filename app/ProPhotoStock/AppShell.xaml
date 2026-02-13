@@ -12,7 +12,9 @@
     <ShellContent        
         Route="register" 
         ContentTemplate="{DataTemplate pages:RegisterPage}"/>
-
+    <ShellContent
+        Route="confirmcontrat"
+        ContentTemplate="{DataTemplate pages:ConfirmContratPage}"/>
     <TabBar Route="main">
         <ShellContent
             Route="catalog"

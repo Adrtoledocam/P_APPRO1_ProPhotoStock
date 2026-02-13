@@ -79,6 +79,9 @@
 	  <MauiXaml Update="Pages\CatalogPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\ConfirmContratPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ContratctsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

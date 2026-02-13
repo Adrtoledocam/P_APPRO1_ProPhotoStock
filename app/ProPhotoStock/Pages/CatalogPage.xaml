@@ -42,7 +42,7 @@
                                     <Label Text="{Binding Tag}" TextColor="#0F5F68" FontAttributes="Bold" />
                                 </HorizontalStackLayout>
 
-                                <Button Text="Acheter" BackgroundColor="#0F5F68" TextColor="White" CornerRadius="20" HeightRequest="45" FontAttributes="Bold" FontSize="20"/>
+                                <Button Text="Acheter" BackgroundColor="#0F5F68" TextColor="White" CornerRadius="20" HeightRequest="45" FontAttributes="Bold" FontSize="20" Clicked="OnConfirmContratClicked"/>
                             </VerticalStackLayout>
                         </Border>
                     </DataTemplate>
