@@ -79,8 +79,8 @@ CREATE TABLE Etiqueter (
 
 INSERT INTO Utilisateur (nom, email, role, motDePasse)
 VALUES 
-('Adrian Toledo', 'aftc1999@gmail.com', 'photographe', 'password1'),
-('Fede Campoverde', 'fede@example.com', 'client', 'password2'),
+('Adrian Toledo', 'adri@gmail.com', 'photographe', 'password1'),
+('Fede Campoverde', 'fede@gmail.com', 'client', 'password2'),
 ('Admin', 'admin@prophotostock.ch', 'responsable', 'password3');
 
 

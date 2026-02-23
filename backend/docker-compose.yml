@@ -1,4 +1,4 @@
-version: '2'
+version: '3.8'
 
 services:
   db:
@@ -15,6 +15,8 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
       - ./db:/docker-entrypoint-initdb.d
+    networks:
+      - backend_net
 
   phpmyadmin:
     image: phpmyadmin:5.2.0
@@ -26,22 +28,27 @@ services:
     restart: always
     ports:
       - 8081:80
+    networks:
+      - backend_net
 
   nodejs:
     build:
       context: .
       dockerfile: nodejs.dockerfile
-    user: "node"
+    container_name: backend-nodejs-1
     working_dir: /home/node/app
     environment:
-      - NODE_ENV=development
-    volumes:
-      - ./app:/home/node/app
-      - /home/node/app/node_modules
+      NODE_ENV: development
     ports:
       - "8080:8080"
-    command: "npm start"
+    depends_on:
+      - db
+    networks:
+      - backend_net
+    command: ["npx", "nodemon", "server.mjs"]
 
 volumes:
   dbdata:
 
+networks:
+  backend_net:
