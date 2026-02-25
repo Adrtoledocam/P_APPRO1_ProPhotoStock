@@ -5,13 +5,10 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 
-import { databaseConnection } from "./config/db.mjs";
-
-//Routes
-//import userRoutes from './routes/userRoutes.mjs';
-//import photoRoutes from './routes/photoRoutes.mjs';
-//import contractRoutes from './routes/contractRoutes.mjs';
+import { pool } from "./config/db.mjs";
 import loginRoutes from './routes/loginRoutes.mjs';
+import authRoutes from "./routes/authRoutes.mjs"; 
+import userRoutes from "./routes/userRoutes.mjs";
 
 dotenv.config();
 
@@ -25,12 +22,26 @@ app.use(cors({
     credentials : true
 }));
 
-app.use(databaseConnection);
+const testDatabaseConnection = async()=>{
+    try
+    {
+        const connection = await pool.getConnection();
+        console.log('Connected to MySQL');
+        connection.release();
+    }
+    catch(error)
+    {
+        //console.error('MySQL connection failed :', error)
+    } 
+}
 
-//app.use('/api/users', userRoutes); 
-//app.use('/api/photos', photoRoutes); 
-//app.use('/api/contracts', contractRoutes);
-app.use('/api/login', loginRoutes);
+await testDatabaseConnection();
+
+app.get("/", (req, res) => { res.send("Backend ProPhotoStock works"); });
+
+//app.use('/api/login', loginRoutes);
+app.use("/api/auth", authRoutes); 
+app.use("/api/users", userRoutes);
 
 const portHttp = process.env.PORT || 8080;
 

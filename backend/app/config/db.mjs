@@ -3,9 +3,21 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-//const host= process.env.DB_HOST || 'db';
-const host= process.env.DB_HOST || 'localhost';
-const port= process.env.DB_PORT || 8080;
+export const pool = mysql.createPool({
+    host : process.env.DB_HOST || 'db',
+    port : process.env.DB_PORT || '3306',
+    user : process.env.DB_USER ||'db_root',
+    password : process.env.DB_PASSWORD ||'db_root',
+    database : process.env.DB_NAME || 'prophotostock',
+    waitForConnections : true,
+    connectionLimit : 10,
+})
+
+
+/*
+const host= process.env.DB_HOST || 'db';
+//const host= process.env.DB_HOST || 'localhost';
+const port= process.env.DB_PORT || 3306;
 const user= process.env.DB_USER || 'root';
 const password = process.env.DB_PASSWORD || 'root';
 const database = process.env.DB_NAME || "prophotostock";
@@ -42,4 +54,6 @@ export const databaseConnection = async (req, res, next) => {
         res.status(500).json({error: 'Internal Server Error'});
     }
 };
+
+*/
 
