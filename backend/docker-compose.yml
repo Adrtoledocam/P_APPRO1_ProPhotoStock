@@ -45,7 +45,7 @@ services:
       - db
     networks:
       - backend_net
-    command: ["npx", "nodemon", "server.mjs"]
+    command: ["node", "server.mjs"]
 
 volumes:
   dbdata:

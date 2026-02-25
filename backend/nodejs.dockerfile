@@ -8,5 +8,5 @@ RUN npm install
 COPY app/ .
 
 EXPOSE 8080
-CMD ["nodemon", "server.mjs"]
+CMD ["node", "server.mjs"]
 

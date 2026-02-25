@@ -1,3 +1,5 @@
+console.log("AUTH CONTROLLER LOADED");
+
 import {pool} from "../config/db.mjs";
 import crypto from "crypto";
 import jwt from "jsonwebtoken";
@@ -8,7 +10,7 @@ const hashPassword = (password, salt) =>
     crypto.createHmac("sha256", salt).update(password).digest("hex");
 
 export const register = async (req, res) => {
-    const {username, password, role} = req.body;
+    const {username, password, role, email} = req.body;
 
     if (!username || !password || !role)
         return res.status(400).json({error:"missing fields"});
@@ -20,9 +22,9 @@ export const register = async (req, res) => {
         const salt =  generateSalt();
         const hashed = hashPassword(password, salt);
 
-        const sql = `INSERT INTO t_users (useUsername, usePassword, useSalt, useRole) VALUES (?,?,?,?)`;
+        const sql = `INSERT INTO t_users (useName, usePassword, useSalt, useRole, useEmail) VALUES (?,?,?,?,?)`;
 
-        await pool.query(sql,[username, hashed, salt, role]);
+        await pool.query(sql,[username, hashed, salt, role, email]);
 
         res.json ({message : "User registered sucessfully"});
     } catch (err) {
