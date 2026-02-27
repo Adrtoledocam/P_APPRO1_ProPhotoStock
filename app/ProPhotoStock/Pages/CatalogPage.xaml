@@ -8,17 +8,17 @@
     <Shell.TitleView>
         <!-- Filtres -->
         <HorizontalStackLayout HorizontalOptions="Center">
-            <Label Text="Categories : " VerticalOptions="Center" TextTransform="Uppercase" />
+            <Label Text="Categories : " VerticalOptions="Center" TextTransform="Uppercase" TextColor="White" />
             <HorizontalStackLayout Spacing="-5">
-                <CheckBox x:Name="PaysageFilter" Color="White" />
+                <CheckBox x:Name="PaysageFilter" Color="White" CheckedChanged="OnFilterChanged"/>
                 <Label Text="#Paysage" VerticalOptions="Center"  TextColor="White" />
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="-5">
-                <CheckBox x:Name="PortraitFilter" Color="White"/>
+                <CheckBox x:Name="PortraitFilter" Color="White" CheckedChanged="OnFilterChanged"/>
                 <Label Text="#Portrait" VerticalOptions="Center" TextColor="White" />
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="-5">
-                <CheckBox x:Name="SportFilter" Color="White"/>
+                <CheckBox x:Name="SportFilter" Color="White" CheckedChanged="OnFilterChanged"/>
                 <Label Text="#Sport" VerticalOptions="Center" TextColor="White" />
             </HorizontalStackLayout>
 
@@ -33,16 +33,17 @@
                     <DataTemplate>
                         <Border StrokeThickness="0" Background="White" StrokeShape="RoundRectangle 20" Margin="0,0" Padding="15">
                             <VerticalStackLayout Spacing="10">
-                                <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" TextColor="Black" />
-                                <Label Text="{Binding User}"  FontSize="14" TextColor="Black"/>
-                           
-                                <Image Source="{Binding ImageUrl}" HeightRequest="180" Aspect="AspectFill" />
-                                
+                                <Label Text="{Binding photoTitle}" FontSize="16" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="{Binding useName}"  FontSize="14" TextColor="Black"/>
+
+                                <Image Source="{Binding photoUrl}" HeightRequest="180" Aspect="AspectFill" />
+
                                 <HorizontalStackLayout Spacing="5">
-                                    <Label Text="{Binding Tag}" TextColor="#0F5F68" FontAttributes="Bold" />
+                                    <Label Text="#" TextColor="#0F5F68" FontAttributes="Bold"/>
+                                    <Label Text="{Binding tagName}" TextColor="#0F5F68" FontAttributes="Bold" />
                                 </HorizontalStackLayout>
 
-                                <Button Text="Acheter" BackgroundColor="#0F5F68" TextColor="White" CornerRadius="20" HeightRequest="45" FontAttributes="Bold" FontSize="20" Clicked="OnConfirmContratClicked"/>
+                                <Button Text="Acheter" BackgroundColor="#0F5F68" TextColor="White" CornerRadius="20" HeightRequest="45" FontAttributes="Bold" FontSize="20" Clicked="OnConfirmContratClicked" CommandParameter="{Binding .}"/>
                             </VerticalStackLayout>
                         </Border>
                     </DataTemplate>

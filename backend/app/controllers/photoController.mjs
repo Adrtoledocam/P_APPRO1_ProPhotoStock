@@ -3,9 +3,22 @@ import { pool } from "../config/db.mjs";
 // GET /api/photos
 export const getAllPhotos = async (req, res) => {
   try {
-    const [rows] = await pool.query(
-      "SELECT * FROM t_photos WHERE isVisible = TRUE"
-    );
+    const sql = `
+      SELECT 
+        p.photoId, 
+        p.photoTitle, 
+        p.photoUrl, 
+        u.useName AS useName, 
+        GROUP_CONCAT(t.tagName SEPARATOR ', ') AS tagName
+      FROM t_photos p
+      JOIN t_photographers ph ON p.fkPhotographer = ph.photographerId
+      JOIN t_users u ON ph.fkUser = u.userId
+      LEFT JOIN t_photo_tags pt ON p.photoId = pt.fkPhoto
+      LEFT JOIN t_tags t ON pt.fkTag = t.tagId
+      WHERE p.isVisible = TRUE
+      GROUP BY p.photoId
+    `;
+    const [rows] = await pool.query(sql);
     res.json(rows);
   } catch (err) {
     console.error(err);
@@ -28,6 +41,70 @@ export const getPhotoById = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Failed to fetch photo" });
+  }
+};
+
+export const getMyPhotos = async (req, res) => {
+  const userId = req.user.id; 
+  try {
+    const sql = `
+      SELECT p.* FROM t_photos p
+      JOIN t_photographers ph ON p.fkPhotographer = ph.photographerId
+      WHERE ph.fkUser = ?
+      ORDER BY p.uploadDate DESC
+    `;
+    const [rows] = await pool.query(sql, [userId]);
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error" });
+  }
+};
+
+
+// GET /api/photos/popular
+export const getPopularPhotos = async (req, res) => {
+  try {
+    const sql = `
+      SELECT p.*, COUNT(c.contractId) as totalSales
+      FROM t_photos p
+      LEFT JOIN t_contracts c ON p.photoId = c.fkPhoto
+      WHERE p.isVisible = TRUE
+      GROUP BY p.photoId
+      ORDER BY totalSales DESC, p.uploadDate DESC
+    `;
+    const [rows] = await pool.query(sql);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: "Error" });
+  }
+};
+// GET /api/photos/tag
+export const getPhotosByTag = async (req, res) => {
+  const { tagName } = req.params;
+  try {
+    const sql = `
+      SELECT 
+        p.photoId, 
+        p.photoTitle, 
+        p.photoUrl, 
+        u.useName AS useName, 
+        (SELECT GROUP_CONCAT(t2.tagName SEPARATOR ', ') 
+         FROM t_photo_tags pt2 
+         JOIN t_tags t2 ON pt2.fkTag = t2.tagId 
+         WHERE pt2.fkPhoto = p.photoId) AS tagName
+      FROM t_photos p
+      JOIN t_photographers ph ON p.fkPhotographer = ph.photographerId
+      JOIN t_users u ON ph.fkUser = u.userId
+      JOIN t_photo_tags pt ON p.photoId = pt.fkPhoto
+      JOIN t_tags t ON pt.fkTag = t.tagId
+      WHERE t.tagName = ? AND p.isVisible = TRUE
+      GROUP BY p.photoId
+    `;
+    const [rows] = await pool.query(sql, [tagName]);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: "Error" });
   }
 };
 
@@ -77,10 +154,9 @@ export const createPhoto = async (req, res) => {
     }
 
     await connection.commit();
-    res.json({ message: "Photo et tag", photoId: newPhotoId });
+    res.json({ message: "Photo post", photoId: newPhotoId });
 
   } catch (err) {
-    // Si algo falla, deshacemos todo lo anterior
     await connection.rollback();
     console.error(err);
     res.status(500).json({ error: "Error" });
@@ -128,37 +204,35 @@ export const deletePhoto = async (req, res) => {
   }
 };
 
-// GET /api/photos/popular
-export const getPopularPhotos = async (req, res) => {
-  try {
-    const sql = `
-      SELECT p.*, COUNT(c.contractId) as totalSales
-      FROM t_photos p
-      LEFT JOIN t_contracts c ON p.photoId = c.fkPhoto
-      WHERE p.isVisible = TRUE
-      GROUP BY p.photoId
-      ORDER BY totalSales DESC, p.uploadDate DESC
-    `;
-    const [rows] = await pool.query(sql);
-    res.json(rows);
-  } catch (err) {
-    res.status(500).json({ error: "Error" });
-  }
-};
-// GET /api/photos/tag
-export const getPhotosByTag = async (req, res) => {
-  const { tagName } = req.params;
-  try {
-    const sql = `
-      SELECT p.* FROM t_photos p
-      JOIN t_photo_tags pt ON p.photoId = pt.fkPhoto
-      JOIN t_tags t ON pt.fkTag = t.tagId
-      WHERE t.tagName = ? AND p.isVisible = TRUE
-    `;
-    const [rows] = await pool.query(sql, [tagName]);
-    res.json(rows);
-  } catch (err) {
-    res.status(500).json({ error: "Error" });
-  }
-};
+export const deleteMyPhoto = async (req, res) => {
+  const photoId = req.params.id;
+  const userId = req.user.id;
 
+  try {
+    const [photoData] = await pool.query(
+      `SELECT p.photoId, 
+        (SELECT COUNT(*) FROM t_contracts WHERE fkPhoto = p.photoId) as contractCount
+       FROM t_photos p
+       JOIN t_photographers ph ON p.fkPhotographer = ph.photographerId
+       WHERE p.photoId = ? AND ph.fkUser = ?`,
+      [photoId, userId]
+    );
+
+    if (photoData.length === 0) {
+      return res.status(403).json({ error: "Not allow " });
+    }
+
+    if (photoData[0].contractCount > 0) {
+      return res.status(400).json({ 
+        error: "Impossible de supprimer: Cette photo est liée a un contrat existant." 
+      });
+    }
+
+    await pool.query("DELETE FROM t_photos WHERE photoId = ?", [photoId]);
+
+    res.json({ message: "Photo suprimée" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error" });
+  }
+};

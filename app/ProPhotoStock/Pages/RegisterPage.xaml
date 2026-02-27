@@ -17,20 +17,28 @@
                 <!--Nom Utilisateur-->
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
                     <Image Source="user_icon.png" HeightRequest="24" WidthRequest="24" VerticalOptions="Center"/>
-                    <Entry Placeholder="Nom d'utilisateur" Text="{Binding User}" WidthRequest="250" FontSize="16" HorizontalOptions="FillAndExpand"/>
+                    <Entry x:Name="RegUserEntry" Placeholder="Nom d'utilisateur"  WidthRequest="250" FontSize="16" HorizontalOptions="FillAndExpand"/>
                 </HorizontalStackLayout>
                 <!--E-mail-->
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
                     <Image Source="email_icon.png" HeightRequest="24" WidthRequest="24" VerticalOptions="Center"/>
-                    <Entry Placeholder="Adresse email" Text="{Binding Email}" WidthRequest="250" FontSize="16" HorizontalOptions="FillAndExpand"/>
+                    <Entry x:Name="RegEmailEntry" Placeholder="Adresse email" WidthRequest="250" FontSize="16" HorizontalOptions="FillAndExpand"/>
                 </HorizontalStackLayout>
                 <!--Mot de passe-->
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
                     <Image Source="password_icon.png" HeightRequest="24" WidthRequest="24" VerticalOptions="Center"/>
-                    <Entry Placeholder="Mot de passe" IsPassword="True" Text="{Binding Password}" WidthRequest="250" FontSize="16" HorizontalOptions="FillAndExpand"/>
+                    <Entry x:Name="RegPasswordEntry" Placeholder="Mot de passe" IsPassword="True" WidthRequest="250" FontSize="16" HorizontalOptions="FillAndExpand"/>
                 </HorizontalStackLayout>
 
-                <Button Text="Nouveau compte" Command="{Binding RegisterCommand}" BackgroundColor="#0F5F68" TextColor="White" FontSize="18" CornerRadius="25"/>
+                <Picker x:Name="RolePicker" Title="Choisissez su rol" WidthRequest="250">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Client</x:String>
+                            <x:String>Photographe</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Nouveau compte" Clicked="OnRegisterClicked" BackgroundColor="#0F5F68" TextColor="White" FontSize="18" CornerRadius="25"/>
 
                 <Label Text="J'ai dejà un compte" TextColor="#0F5F68" HorizontalOptions="Center" TextDecorations="Underline" FontSize="14" FontAttributes="Bold" >
                     <Label.GestureRecognizers>

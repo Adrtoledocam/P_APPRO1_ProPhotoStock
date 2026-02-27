@@ -1,19 +1,95 @@
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
+using ProPhotoStock.Models;
+using ProPhotoStock.Services;
 
 namespace ProPhotoStock.Pages;
 
+//[QueryProperty(nameof(Photo), "SelectedPhoto")]
 public partial class ConfirmContratPage : ContentPage
 {
-	private string _contractType = "";
+    private readonly ApiService _apiService;
+    private string _contractType = "";
 	private string _usageType = "";
 
-	public ConfirmContratPage()
+    public static PhotoItem SelectedPhoto { get; set; }
+
+    //private PhotoItem _photo;
+	/*public PhotoItem Photo
+    {
+        get => _photo;
+        set
+        {
+            _photo = value;
+            OnPropertyChanged();
+            UpdateUI(); 
+        }
+    }*/
+    public ConfirmContratPage()
 	{
 		InitializeComponent();
-		PhotoPreview.Source = "https://images.unsplash.com/photo-1506744038136-46273834b3fb";	
+        _apiService = new ApiService();
     }
-	private void OnContractChanged(object sender, CheckedChangedEventArgs e)
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        if (SelectedPhoto != null)
+        {
+            PhotoPreview.Source = SelectedPhoto.photoUrl;
+            AuthorLabel.Text = SelectedPhoto.useName;
+            TitleLabel.Text = SelectedPhoto.photoTitle;
+        }
+    }/*
+    private void UpdateUI()
+    {
+        dynamic p = Photo;
+        if (p != null)
+        {
+            try
+            {
+                PhotoPreview.Source = p.photoUrl;
+            }
+            catch
+            {
+                // Evitamos que un error de carga de imagen rompa la página
+            }
+        }
+    }
+    */
+    private async void OnBuyClicked(object sender, EventArgs e)
+    {
+        if (SelectedPhoto == null) return;
+
+        if (string.IsNullOrEmpty(_contractType) || string.IsNullOrEmpty(_usageType))
+        {
+            await DisplayAlert("Erreur", "Veuillez sélectionner un contrat et un usage.", "OK");
+            return;
+        }
+
+        var contractRequest = new ContractRequest
+        {
+            fkPhoto = SelectedPhoto.photoId,
+            contractType = _contractType,
+            usageType = _usageType
+        };
+
+        bool success = await _apiService.CreateContractAsync(contractRequest);
+
+        if (success)
+        {
+            await DisplayAlert("Succès", "Contrat confirmé et achat réussi", "OK");
+            await Shell.Current.GoToAsync("///main/catalog");
+        }
+        else
+        {
+            await DisplayAlert("Erreur", "Problème lors de la création del contrato.", "OK");
+        }
+    }
+
+
+    private void OnContractChanged(object sender, CheckedChangedEventArgs e)
 	{
 		if (!e.Value) return;
 		var rb = sender as RadioButton;
@@ -64,17 +140,5 @@ public partial class ConfirmContratPage : ContentPage
 		}
 
         TotalLabel.Text = $"Total : CHF {total}.-";
-    }
-
-    private async void OnBuyClicked(object sender, EventArgs e)
-	{
-        if (_contractType == null || _usageType == null) 
-		{ 
-			await DisplayAlert("Erreur", "Veuillez sélectionner un contrat et un usage.", "OK"); 
-			return; 		
-		}
-        await DisplayAlert("Contrat confirmé", $"Vous avez acheté le contrat", "OK");
-
-		await Shell.Current.GoToAsync("///main/catalog");
     }
 }

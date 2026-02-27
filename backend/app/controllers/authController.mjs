@@ -36,10 +36,10 @@ export const register = async (req, res) => {
 }; 
 
 export const login = async (req, res) => {
-    const {username, password} = req.body;
+    const {email, password} = req.body;
 
     try{
-        const [rows] = await pool.query("SELECT * FROM t_users WHERE useName = ?", [username]);
+        const [rows] = await pool.query("SELECT * FROM t_users WHERE useEmail = ?", [email]);
 
         if (rows.length === 0)
       return res.status(401).json({ error: "Invalid credentials" });
@@ -54,14 +54,21 @@ export const login = async (req, res) => {
     const token = jwt.sign(
       {
         id: user.userId,
-        username: user.useUsername,
+        username: user.userName,
         role: user.useRole,
       },
       process.env.JWT_SECRET || "secret123",
       { expiresIn: "2h" }
     );
 
-    res.json({ token });
+    res.json({ 
+    token, 
+    user: {
+        username: user.useName, 
+        role: user.useRole,
+        email: user.useEmail
+    } 
+});
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Login failed" });

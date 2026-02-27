@@ -6,8 +6,8 @@
 
     <VerticalStackLayout Padding="20" Spacing="25">
         <VerticalStackLayout x:Name="PhotographInfo" HorizontalOptions="Center">
-            <Label Text="Utilisateur2" FontAttributes="Bold" FontSize="Body"  HorizontalOptions="Center"/>
-            <Label Text="Photographe" FontSize="16"  HorizontalOptions="Center"/>
+            <Label x:Name="AuthorLabel" Text="..." FontAttributes="Bold" FontSize="Body"  HorizontalOptions="Center"/>
+            <Label x:Name="TitleLabel" Text="..." FontSize="16"  HorizontalOptions="Center"/>
             <Image x:Name="PhotoPreview"  HeightRequest="250" Aspect="AspectFill" BackgroundColor="White"/>
         </VerticalStackLayout>
 

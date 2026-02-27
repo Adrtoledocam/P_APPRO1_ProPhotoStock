@@ -60,7 +60,6 @@ CREATE TABLE t_contracts (
     endDate DATETIME NOT NULL,
     price DECIMAL(15,2) NOT NULL,
     status VARCHAR(20) DEFAULT 'active',
-    photographerCommission DECIMAL(15,2) NOT NULL, 
     fkUsage INT NOT NULL,
     fkType INT NOT NULL,
     fkPhoto INT NOT NULL,
@@ -77,9 +76,9 @@ CREATE TABLE t_contracts (
 
 
 INSERT INTO t_users (useName, useEmail, useRole, usePassword) VALUES 
-('photo', 'adri@prophoto.com', 'photographer', 'e150a1ec81e8e93e1eae2c3a77e66ec6dbd6a3b460f89c1d08aecf422ee401a0'),
-('client', 'fede@gmail.com', 'client', 'e150a1ec81e8e93e1eae2c3a77e66ec6dbd6a3b460f89c1d08aecf422ee401a0'),
-('Responsable Admin', 'admin@prophotostock.ch', 'admin', 'e150a1ec81e8e93e1eae2c3a77e66ec6dbd6a3b460f89c1d08aecf422ee401a0');
+('photo', 'adri@prophoto.com', 'photographer', '123456'),
+('client', 'fede@gmail.com', 'client', '123456'),
+('Responsable Admin', 'admin@prophotostock.ch', 'admin', '123456');
 
 INSERT INTO t_photographers (fkUser) VALUES (1);
 
