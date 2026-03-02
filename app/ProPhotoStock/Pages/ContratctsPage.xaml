@@ -3,38 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProPhotoStock.Pages.ContratctsPage"
              BackgroundColor="White"
-             Title="Contrats">
+             Title="Mes Contrats">
 
     <CollectionView x:Name="ContractsList" ItemsLayout="VerticalList" SelectionMode="None" Margin="20" BackgroundColor="White">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Border Background="White" StrokeThickness="0" StrokeShape="RoundRectangle 20" Padding="15" Margin="0,10">
-
                     <VerticalStackLayout Spacing="10">
                         <HorizontalStackLayout >
                             <Label Text="Contrat # " FontAttributes="Bold" FontSize="16" TextColor="Black" />
-                            <Label Text="{Binding ContractNumber}" FontSize="16" FontAttributes="Bold" TextColor="Black" />
+                            <Label Text="{Binding contractId}" FontSize="16" FontAttributes="Bold" TextColor="Black" />
+                            <Label Text=" - " />
+                            <Label Text="{Binding status}" TextTransform="Uppercase" FontSize="12" VerticalOptions="Center" TextColor="Black" />
                         </HorizontalStackLayout>
 
                         <Label Text="{Binding Photographer}" FontSize="14" TextColor="Black" />
-                        <Label Text="{Binding PhotoName}" FontSize="14" TextColor="Black" />
-                        <Image Source="{Binding ImageUrl}" HeightRequest="150" Aspect="AspectFill" />
+                        <Label Text="{Binding photoTitle}" FontSize="14" TextColor="Black" />
+                        <Image Source="{Binding photoUrl}" HeightRequest="150" Aspect="AspectFill" />
                        
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Valable jusqu'au :" TextColor="Black" />
-                            <Label Text="{Binding MaxDate}" TextColor="Black" />
+                            <Label Text="{Binding DisplayDate}" TextColor="Black" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Type : "  TextColor="Black"   />
-                            <Label Text="{Binding ContractType}"  TextColor="Black"  />
+                            <Label Text="{Binding fkType}"  TextColor="Black"  />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Usage : "  TextColor="Black"  />
-                            <Label Text="{Binding ContractUsage}"  TextColor="Black"  />
+                            <Label Text="{Binding fkUsage}"  TextColor="Black"  />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Coût :" FontAttributes="Bold" TextColor="Black" />
-                            <Label Text="{Binding Cost}" FontSize="16" TextColor="#0F5F68" FontAttributes="Bold" />
+                            <Label Text="{Binding price}" FontSize="16" TextColor="#0F5F68" FontAttributes="Bold" />
                         </HorizontalStackLayout>
                         
                     </VerticalStackLayout>

@@ -1,5 +1,5 @@
 using ProPhotoStock.Services;
-
+using ProPhotoStock.Models;
 namespace ProPhotoStock.Pages;
 
 public partial class LoginPage : ContentPage
@@ -36,6 +36,7 @@ public partial class LoginPage : ContentPage
             {
                 Preferences.Set("user_role", result.User.role);
                 Preferences.Set("user_name", result.User.username);
+                Preferences.Set("user_email", result.User.email);
             }
             
             await Shell.Current.GoToAsync("///main/catalog");

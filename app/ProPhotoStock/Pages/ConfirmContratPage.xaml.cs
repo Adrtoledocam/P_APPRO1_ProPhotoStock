@@ -14,77 +14,73 @@ public partial class ConfirmContratPage : ContentPage
 
     public static PhotoItem SelectedPhoto { get; set; }
 
-    //private PhotoItem _photo;
-	/*public PhotoItem Photo
-    {
-        get => _photo;
-        set
-        {
-            _photo = value;
-            OnPropertyChanged();
-            UpdateUI(); 
-        }
-    }*/
     public ConfirmContratPage()
 	{
 		InitializeComponent();
         _apiService = new ApiService();
     }
 
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
+        int id = Preferences.Get("selected_photo_id", 0);
 
-        if (SelectedPhoto != null)
-        {
-            PhotoPreview.Source = SelectedPhoto.photoUrl;
-            AuthorLabel.Text = SelectedPhoto.useName;
-            TitleLabel.Text = SelectedPhoto.photoTitle;
-        }
-    }/*
-    private void UpdateUI()
-    {
-        dynamic p = Photo;
-        if (p != null)
+        if (id != 0)
         {
             try
             {
-                PhotoPreview.Source = p.photoUrl;
+                var photo = await _apiService.GetPhotoByIdAsync(id);
+                if (photo != null)
+                {
+                    PhotoPreview.Source = photo.photoUrl;
+                    AuthorLabel.Text = photo.useName;
+                    TitleLabel.Text = photo.photoTitle;
+                    this.BindingContext = photo;
+                }
             }
             catch
             {
-                // Evitamos que un error de carga de imagen rompa la página
+                await DisplayAlert("Erreur", "Impossible de charger les détails de la photo", "OK");
             }
-        }
+        }        
     }
-    */
     private async void OnBuyClicked(object sender, EventArgs e)
     {
-        if (SelectedPhoto == null) return;
-
+        var photo = this.BindingContext as PhotoItem;
+        int photoId = photo?.photoId ?? Preferences.Get("selected_photo_id", 0);
+        if (photoId == 0)
+        {
+            await DisplayAlert("Erreur", "Impossible d'identifier la photo pour l'achat.", "OK");
+            return;
+        }
         if (string.IsNullOrEmpty(_contractType) || string.IsNullOrEmpty(_usageType))
         {
             await DisplayAlert("Erreur", "Veuillez sélectionner un contrat et un usage.", "OK");
             return;
         }
-
         var contractRequest = new ContractRequest
         {
-            fkPhoto = SelectedPhoto.photoId,
+            fkPhoto = photoId,
             contractType = _contractType,
             usageType = _usageType
         };
-
-        bool success = await _apiService.CreateContractAsync(contractRequest);
-
-        if (success)
+        try
         {
-            await DisplayAlert("Succès", "Contrat confirmé et achat réussi", "OK");
-            await Shell.Current.GoToAsync("///main/catalog");
+            bool success = await _apiService.CreateContractAsync(contractRequest);
+
+            if (success)
+            {
+                await DisplayAlert("Succès", "Contrat confirmé et achat réussi", "OK");
+                await Shell.Current.GoToAsync("///main/catalog");
+            }
+            else
+            {
+                await DisplayAlert("Erreur", "Problème lors de la création del contrato.", "OK");
+            }
         }
-        else
+        catch
         {
-            await DisplayAlert("Erreur", "Problème lors de la création del contrato.", "OK");
+            await DisplayAlert("Erreur Système", $"Une erreur est survenue", "OK");
         }
     }
 

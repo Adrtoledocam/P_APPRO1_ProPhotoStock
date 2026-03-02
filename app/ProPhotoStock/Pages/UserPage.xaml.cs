@@ -1,27 +1,41 @@
+using ProPhotoStock.Models;
+using ProPhotoStock.Services;
 namespace ProPhotoStock.Pages;
 
 public partial class UserPage : ContentPage
 {
     public UserPage() 
     { 
-        InitializeComponent(); 
-        BindingContext = new UserInfo 
-        { 
-            UserName = "Utilisateur 2", 
-            Email = "Utilisateur2@gmail.com", 
-            AccountType = "Photographe", 
-            ContractsCount = 2 
-        }; 
+        InitializeComponent();        
     }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+
+        LblUserName.Text = Preferences.Get("user_name", "Inconnu");
+        LblEmail.Text = Preferences.Get("user_email", "Non disponible");
+        LblAccountType.Text = Preferences.Get("user_role", "Client");
+
+
+    }
+
+    /*
+    private void LoadUserData()
+    {
+
+        BindingContext = new UserInfo
+        {
+            UserName = "test", 
+            Email = "test@test.com",
+            AccountType = "Photographe", // 
+            ContractsCount = 5
+        };
+    }*/
     private async void OnLogoutClicked(object sender, EventArgs e)
-    { 
+    {
+        Preferences.Clear();
         await Shell.Current.GoToAsync("///login");
     }
-}
-public class UserInfo 
-{ 
-    public required string UserName { get; set; } 
-    public required string Email { get; set; } 
-    public required string AccountType { get; set; } 
-    public required int ContractsCount { get; set; } 
 }

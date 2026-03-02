@@ -52,7 +52,6 @@ namespace ProPhotoStock.Services
         {
             try
             {
-                // Usamos la IP 10.0.2.2 para el emulador
                 var response = await _httpClient.PostAsJsonAsync($"{BaseUrl}auth/register", userData);
                 return response.IsSuccessStatusCode;
             }
@@ -60,6 +59,26 @@ namespace ProPhotoStock.Services
             {
                 return false;
             }
+        }
+
+        public async Task<List<ContractItem>> GetContractsByRoleAsync()
+        {
+            var token = Preferences.Get("jwt_token", "");
+            var role = Preferences.Get("user_role", "").ToLower();
+
+            _httpClient.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            // Definimos la ruta según el rol
+            string endpoint = role switch
+            {
+                "client" => "contracts/user",
+                "photographe" => "contracts/photographer",
+                "admin" => "contracts/admin/stats",
+                _ => "contracts/user"
+            };
+
+            return await _httpClient.GetFromJsonAsync<List<ContractItem>>($"{BaseUrl}{endpoint}");
         }
     }
 }

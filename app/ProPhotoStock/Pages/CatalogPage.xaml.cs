@@ -47,36 +47,27 @@ public partial class CatalogPage : ContentPage
     }
     private async void OnConfirmContratClicked(object sender, EventArgs e)
     {
-        //var photo = (sender as Button).CommandParameter as PhotoItem;
-        await DisplayAlert("Click", "Botón presionado", "OK");
         var button = sender as Button;
         var dataContext = button?.BindingContext;
-        //var photo = button?.CommandParameter as PhotoItem;
-        if (dataContext != null)
+        if(dataContext != null)
         {
-            //dynamic photo = dataContext;
-            ConfirmContratPage.SelectedPhoto = dataContext as PhotoItem;
-            //await DisplayAlert("Données detectés", $"ID Foto: {ConfirmContratPage.SelectedPhoto.photoId}", "OK");
+            dynamic photoD = dataContext;
+            Preferences.Set("selected_photo_id", photoD.photoId);           
 
-            /*
-            await DisplayAlert("Données detectés", $"ID Foto: {photo.photoId}", "OK");
-            var navigationParameter = new Dictionary<string, object>
-            {
-                { "SelectedPhoto", dataContext }
-            };*/
             try
             {
                 await Shell.Current.GoToAsync("ConfirmContratPage");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"Error de navegación: {ex.Message}", "OK");
+                await DisplayAlert("Error", ex.Message, "OK");
             }
         }
         else
         {
             await DisplayAlert("Error", "Error boton", "OK");
         }
+        
     }
 }
 public class PhotoItem
