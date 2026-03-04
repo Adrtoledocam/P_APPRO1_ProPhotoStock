@@ -102,8 +102,6 @@ namespace ProPhotoStock.Services
                 var statusCode = (int)response.StatusCode;
                 var error = await response.Content.ReadAsStringAsync();
                 System.Diagnostics.Debug.WriteLine($"SERVER ERROR: {error}");
-                System.Diagnostics.Debug.WriteLine($"[API ERROR] Status: {statusCode}");
-
                 return null;
             }
             catch { return null; }
