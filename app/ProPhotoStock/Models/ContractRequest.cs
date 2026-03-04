@@ -9,7 +9,7 @@ namespace ProPhotoStock.Models
     public class ContractRequest
     {
         public int fkPhoto { get; set; }
-        public string contractType { get; set; }
-        public string usageType { get; set; }
+        public int fkUsage { get; set; }
+        public int fkType { get; set; }
     }
 }

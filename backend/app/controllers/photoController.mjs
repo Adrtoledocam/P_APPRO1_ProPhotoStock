@@ -1,4 +1,11 @@
 import { pool } from "../config/db.mjs";
+import { v2 as cloudinary } from 'cloudinary';
+cloudinary.config({ 
+  cloud_name: 'dzguf69ws', 
+  api_key: '785519479823275', 
+  api_secret: 'M_-iDEtOueXwp3uHB9zFzORCxsw' 
+});
+
 
 // GET /api/photos
 export const getAllPhotos = async (req, res) => {
@@ -110,60 +117,76 @@ export const getPhotosByTag = async (req, res) => {
 
 // POST /api/photos
 export const createPhoto = async (req, res) => {
-  const { photoTitle, photoUrl, uploadDate, status, tags } = req.body;
+  const { photoTitle, photoBase64, uploadDate, status, tags } = req.body;
   const idUserLogin = req.user.id;
 
-  const connection = await pool.getConnection();
+  if (!photoBase64) {
+    return res.status(400).json({ error: "Image not found" });
+  }
+
+  let cloudinaryUrl = "";
 
   try {
-    await connection.beginTransaction();
+    const uploadResult = await cloudinary.uploader.upload(`data:image/jpeg;base64,${photoBase64}`, {
+      folder: "prophotostock_uploads", 
+    });
+    
+    cloudinaryUrl = uploadResult.secure_url; 
 
-    const [photographerRows] = await connection.query(
-      "SELECT photographerId FROM t_photographers WHERE fkUser = ?", 
-      [idUserLogin]
-    );
+    const connection = await pool.getConnection();
+    try {
+      await connection.beginTransaction();
 
-    if (photographerRows.length === 0) {
-      await connection.rollback();
-      return res.status(403).json({ error: "Utilisateur pas valide" });
-    }
-
-    const photographerId = photographerRows[0].photographerId;
-
-    const sqlPhoto = `
-      INSERT INTO t_photos (photoTitle, photoUrl, uploadDate, isVisible, status, fkPhotographer)
-      VALUES (?, ?, ?, TRUE, ?, ?)
-    `;
-
-    const [photoResult] = await connection.query(sqlPhoto, [
-      photoTitle,
-      photoUrl,
-      uploadDate || new Date(),
-      status || 'available',
-      photographerId
-    ]);
-
-    const newPhotoId = photoResult.insertId;
-
-    if (tags && Array.isArray(tags) && tags.length > 0) {
-      const tagQueries = tags.map(tagId => [newPhotoId, tagId]);
-      await connection.query(
-        "INSERT INTO t_photo_tags (fkPhoto, fkTag) VALUES ?", 
-        [tagQueries]
+      const [photographerRows] = await connection.query(
+        "SELECT photographerId FROM t_photographers WHERE fkUser = ?", 
+        [idUserLogin]
       );
+
+      if (photographerRows.length === 0) {
+        await connection.rollback();
+        return res.status(403).json({ error: "Utilisateur pas valide" });
+      }
+
+      const photographerId = photographerRows[0].photographerId;
+
+      const sqlPhoto = `
+        INSERT INTO t_photos (photoTitle, photoUrl, uploadDate, isVisible, status, fkPhotographer)
+        VALUES (?, ?, ?, TRUE, ?, ?)
+      `;
+
+      const [photoResult] = await connection.query(sqlPhoto, [
+        photoTitle,
+        cloudinaryUrl, 
+        uploadDate || new Date(),
+        status || 'available',
+        photographerId
+      ]);
+
+      const newPhotoId = photoResult.insertId;
+
+      if (tags && Array.isArray(tags) && tags.length > 0) {
+        const tagQueries = tags.map(tagId => [newPhotoId, tagId]);
+        await connection.query(
+          "INSERT INTO t_photo_tags (fkPhoto, fkTag) VALUES ?", 
+          [tagQueries]
+        );
+      }
+
+      await connection.commit();
+      res.json({ message: "Photo post", photoId: newPhotoId, url: cloudinaryUrl });
+
+    } catch (dbError) {
+      await connection.rollback();
+      throw dbError; 
+    } finally {
+      connection.release();
     }
-
-    await connection.commit();
-    res.json({ message: "Photo post", photoId: newPhotoId });
-
   } catch (err) {
-    await connection.rollback();
-    console.error(err);
-    res.status(500).json({ error: "Error" });
-  } finally {
-    connection.release();
+    console.error("Error uploade:", err);
+    res.status(500).json({ error: "Error ", details: err.message });
   }
 };
+
 
 // PUT /api/photos/:id
 export const updatePhoto = async (req, res) => {

@@ -52,15 +52,15 @@
             <Label Text="Genre" FontAttributes="Bold" TextColor="Black" />
             <HorizontalStackLayout Spacing="20" >
                 <HorizontalStackLayout Spacing="5" >
-                    <CheckBox Color="#0F5F68" />
+                    <CheckBox x:Name="TagPortrait" Color="#0F5F68" />
                     <Label Text="#Portrait" TextColor="Black" VerticalOptions="Center"   />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout Spacing="5">
-                    <CheckBox Color="#0F5F68"/>
-                    <Label Text="#Paysage" TextColor="Black" VerticalOptions="Center" />
+                    <CheckBox x:Name="TagPaysage" Color="#0F5F68"/>
+                    <Label  Text="#Paysage" TextColor="Black" VerticalOptions="Center" />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout Spacing="5" >
-                    <CheckBox Color="#0F5F68" />
+                    <CheckBox x:Name="TagSport" Color="#0F5F68" />
                     <Label Text="#Sport" TextColor="Black" VerticalOptions="Center" />
                 </HorizontalStackLayout>
             </HorizontalStackLayout>

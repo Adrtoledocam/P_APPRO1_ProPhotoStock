@@ -51,17 +51,17 @@ export const getMonthlyReport = async (req, res) => {
   try {
     const sql = `
       SELECT 
-        u.useName AS photographerName,
+        u.useName AS photographerName, 
         p.photoTitle,
+        c.contractId,                
         c.price,
-        c.startDate AS saleDate,
-        c.photographerCommission
+        c.startDate,                 
+        c.photographerCommission,
+        c.status                     
       FROM t_contracts c
       JOIN t_photos p ON c.fkPhoto = p.photoId
       JOIN t_photographers ph ON p.fkPhotographer = ph.photographerId
       JOIN t_users u ON ph.fkUser = u.userId
-      WHERE MONTH(c.startDate) = MONTH(CURRENT_DATE())
-        AND YEAR(c.startDate) = YEAR(CURRENT_DATE());
     `;
 
     const [rows] = await pool.query(sql);
@@ -79,16 +79,18 @@ export const getMyContracts = async (req, res) => {
   try {
     let sql;
     if (role === 'client') {
-      // El cliente ve lo que compró
       sql = `SELECT c.*, p.photoTitle, p.photoUrl FROM t_contracts c 
              JOIN t_photos p ON c.fkPhoto = p.photoId 
-             WHERE c.fkUser = ?`;
+             WHERE c.fkUser = ?`;                   
     } else if (role === 'photographer') {
-      // El fotógrafo ve las ventas de sus fotos
-      sql = `SELECT c.*, p.photoTitle FROM t_contracts c
+      sql = `SELECT c.*, p.photoTitle, p.photoUrl FROM t_contracts c
              JOIN t_photos p ON c.fkPhoto = p.photoId
              JOIN t_photographers ph ON p.fkPhotographer = ph.photographerId
              WHERE ph.fkUser = ?`;
+    } else if (role === 'admin') {
+      sql = `SELECT c.*, p.photoTitle, p.photoUrl 
+               FROM t_contracts c 
+               JOIN t_photos p ON c.fkPhoto = p.photoId`;
     }
 
     const [rows] = await pool.query(sql, [userId]);

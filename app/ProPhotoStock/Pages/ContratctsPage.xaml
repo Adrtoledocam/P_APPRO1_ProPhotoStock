@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProPhotoStock.Pages.ContratctsPage"
              BackgroundColor="White"
-             Title="Mes Contrats">
+             Title="Contrats">
 
     <CollectionView x:Name="ContractsList" ItemsLayout="VerticalList" SelectionMode="None" Margin="20" BackgroundColor="White">
         <CollectionView.ItemTemplate>
@@ -17,7 +17,6 @@
                             <Label Text="{Binding status}" TextTransform="Uppercase" FontSize="12" VerticalOptions="Center" TextColor="Black" />
                         </HorizontalStackLayout>
 
-                        <Label Text="{Binding Photographer}" FontSize="14" TextColor="Black" />
                         <Label Text="{Binding photoTitle}" FontSize="14" TextColor="Black" />
                         <Image Source="{Binding photoUrl}" HeightRequest="150" Aspect="AspectFill" />
                        
@@ -27,11 +26,11 @@
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Type : "  TextColor="Black"   />
-                            <Label Text="{Binding fkType}"  TextColor="Black"  />
+                            <Label Text="{Binding TypeName}"  TextColor="Black"  />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Usage : "  TextColor="Black"  />
-                            <Label Text="{Binding fkUsage}"  TextColor="Black"  />
+                            <Label Text="{Binding UsageName}"  TextColor="Black"  />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout Spacing="10">
                             <Label Text="Coût :" FontAttributes="Bold" TextColor="Black" />

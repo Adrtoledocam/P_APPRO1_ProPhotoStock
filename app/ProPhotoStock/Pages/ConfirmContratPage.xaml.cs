@@ -58,11 +58,21 @@ public partial class ConfirmContratPage : ContentPage
             await DisplayAlert("Erreur", "Veuillez sélectionner un contrat et un usage.", "OK");
             return;
         }
+
+        int typeId = _contractType == "exclusif" ? 1 : 2;
+
+        int usageId = _usageType switch
+        {
+            "pub" => 1,
+            "graph" => 2,
+            "media" => 3,
+            _ => 0
+        };
         var contractRequest = new ContractRequest
         {
             fkPhoto = photoId,
-            contractType = _contractType,
-            usageType = _usageType
+            fkType = typeId,
+            fkUsage = usageId
         };
         try
         {

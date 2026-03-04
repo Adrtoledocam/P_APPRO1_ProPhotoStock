@@ -18,6 +18,8 @@ namespace ProPhotoStock.Services
         public ApiService()
         {
             _httpClient = new HttpClient();
+            _httpClient.MaxResponseContentBufferSize = 256000000;
+            _httpClient.Timeout = TimeSpan.FromMinutes(3);
         }
 
         public async Task<LoginResponse> LoginAsync(string email, string password)
@@ -69,16 +71,44 @@ namespace ProPhotoStock.Services
             _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
-            // Definimos la ruta según el rol
             string endpoint = role switch
             {
-                "client" => "contracts/user",
-                "photographe" => "contracts/photographer",
-                "admin" => "contracts/admin/stats",
-                _ => "contracts/user"
+                "client" => "contracts/my-contracts",
+                "photographer" => "contracts/my-contracts",
+                "admin" => "contracts/my-contracts",
+                _ => ""
             };
 
             return await _httpClient.GetFromJsonAsync<List<ContractItem>>($"{BaseUrl}{endpoint}");
         }
+        public async Task<int?> UploadPhotoAsync(object photoData)
+        {
+            try
+            {
+                var token = Preferences.Get("jwt_token", "");
+                _httpClient.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+                var json = System.Text.Json.JsonSerializer.Serialize(photoData);
+                var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+
+                var response = await _httpClient.PostAsync($"{BaseUrl}photos", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    
+                    var result = await response.Content.ReadFromJsonAsync<UploadResponse>();
+                    return result?.photoId;
+                }
+                var statusCode = (int)response.StatusCode;
+                var error = await response.Content.ReadAsStringAsync();
+                System.Diagnostics.Debug.WriteLine($"SERVER ERROR: {error}");
+                System.Diagnostics.Debug.WriteLine($"[API ERROR] Status: {statusCode}");
+
+                return null;
+            }
+            catch { return null; }
+        }
+
+        public class UploadResponse { public string message { get; set; } public int photoId { get; set; } }
     }
 }
