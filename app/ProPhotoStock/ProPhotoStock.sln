@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProPhotoStock", "ProPhotoStock.csproj", "{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "..\TestProject1\TestProject1.csproj", "{DEAE03C2-DCF8-483F-83E0-148191612665}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,10 @@ Global
 		{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B604B5D0-E24B-4791-B1AE-4D1974FAC8B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEAE03C2-DCF8-483F-83E0-148191612665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEAE03C2-DCF8-483F-83E0-148191612665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEAE03C2-DCF8-483F-83E0-148191612665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEAE03C2-DCF8-483F-83E0-148191612665}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
