@@ -90,12 +90,3 @@ public static string BaseUrl = "http://10.0.2.2:3000/api/";
 - **Sécurité** : Authentification JWT
 
 ---
-
-## Tips GitHub
-Pour ajouter des images dans le README, créez un dossier `assets` et utilisez :
-
-```md
-![Nom de l'image](assets/screenshot.png)
-```
-
-Créez un dossier `/assets` dans votre dépôt et placez-y vos captures d’écran. Remplace
